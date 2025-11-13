@@ -9,7 +9,7 @@ GameOver::GameOver(Game& game) : gameRef(game), message(font)
         std::cerr << "Erreur chargement font GameOver\n";
 
     message.setFont(font);
-    message.setString("Vous avez été touché par un carré rouge !\nAppuyez sur ENTREE pour recommencer.");
+    message.setString("Vous avez été touché par une ombre !\nAppuyez sur ENTREE pour recommencer.");
     message.setCharacterSize(24);
     message.setFillColor(sf::Color::Red);
     message.setPosition({ 50.f, 200.f });

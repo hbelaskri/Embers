@@ -129,7 +129,6 @@
   <ItemGroup>
     <ClCompile Include="Embers.cpp" />
     <ClCompile Include="Enemy.cpp" />
-    <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameOver.cpp" />
     <ClCompile Include="Level.cpp" />

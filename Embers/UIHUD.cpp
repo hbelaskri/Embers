@@ -46,8 +46,7 @@ void UIHUD::update(float dt)
 void UIHUD::draw(sf::RenderWindow& window)
 {
     // Jauge lumière
-    window.draw(barBackground);
-    window.draw(barForeground);
+  
 
     // Messages narratifs
     if (!messages.empty() && font.getInfo().family != "") {
@@ -57,4 +56,6 @@ void UIHUD::draw(sf::RenderWindow& window)
         text.setPosition({ 50.f, 50.f });
         window.draw(text);
     }
+    window.draw(barBackground);
+    window.draw(barForeground);
 }

@@ -13,15 +13,6 @@ Level2End::Level2End(Game& game, int finalScore)
     missionText.setCharacterSize(28);
     missionText.setFillColor(sf::Color::White);
 
-    // --- Reflet orangé ---
-    missionText.setOutlineColor(sf::Color(255, 150, 0));
-    missionText.setOutlineThickness(2.f);
-
-    missionText.setStyle(sf::Text::Bold);
-
-    // position centrée approximativement pour fenêtre 800x600
-    missionText.setPosition({ 400.f, 300.f });
-
     if (score >= 100) {
         missionText.setString(
             "Bravo ! Tu as récupéré assez de lumière pour sauver le monde !\n\n"
@@ -37,6 +28,17 @@ Level2End::Level2End(Game& game, int finalScore)
             "Appuie sur ENTREE pour revenir au menu."
         );
     }
+
+    // --- Reflet orangé ---
+    missionText.setOutlineColor(sf::Color(255, 150, 0));
+    missionText.setOutlineThickness(2.f);
+
+    missionText.setStyle(sf::Text::Bold);
+
+    // position centrée approximativement pour fenêtre 800x600
+    missionText.setPosition({ 400.f, 300.f });
+
+    
 }
 
 void Level2End::handleEvent(const sf::Event& ev)

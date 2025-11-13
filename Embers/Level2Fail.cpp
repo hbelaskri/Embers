@@ -3,12 +3,18 @@
 #include <iostream>
 
 Level2Fail::Level2Fail(Game& game, int finalScore)
-    : gameRef(game), score(finalScore), failText(font)
+    : gameRef(game), failText(font), score(finalScore)
 {
     if (!font.openFromFile("assets/fonts/arial.ttf")) {
         std::cerr << "Erreur chargement font Level2Fail\n";
     }
 
+
+    failText.setString(
+        "Vous n'avez pas reussi à sauver le monde.\n"
+        "Lumieres collectees : " + std::to_string(score) + "\n\n"
+        "Appuyez sur ENTREE pour revenir au menu et reessayer."
+    );
     failText.setFont(font);
     failText.setCharacterSize(30);
     failText.setFillColor(sf::Color::Red);
@@ -16,11 +22,8 @@ Level2Fail::Level2Fail(Game& game, int finalScore)
     failText.setOutlineThickness(2.f);
     failText.setPosition({ 50.f, 200.f });
 
-    failText.setString(
-        "Vous n'avez pas réussi à sauver le monde.\n"
-        "Lumières collectées : " + std::to_string(score) + "\n\n"
-        "Appuyez sur ENTREE pour revenir au menu et réessayer."
-    );
+    
+
 }
 
 void Level2Fail::handleEvent(const sf::Event& ev) {
