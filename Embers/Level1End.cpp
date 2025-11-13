@@ -9,7 +9,7 @@ Level1End::Level1End(Game& game) : gameRef(game), titleText(font), missionText(f
     }
 
     // --- Titre ---
-    titleText.setString(" Prépare-toi pour le Boss ");
+    titleText.setString(" Sauve le Monde des Ténèbres ");
     titleText.setCharacterSize(40);
     titleText.setFillColor(sf::Color::White);
     titleText.setOutlineColor(sf::Color(255, 100, 0)); // rouge-orangée
@@ -20,10 +20,10 @@ Level1End::Level1End(Game& game) : gameRef(game), titleText(font), missionText(f
     // --- Texte de mission / transition ---
     missionText.setString(
         "Bravo ! Tu as survécu au premier niveau.\n\n"
-        "Mais le danger n'est pas terminé...\n\n"
-        "Shadow, le seigneur des ténèbres, t'attend.\n"
-        "Prépare-toi à affronter le Boss et son armée !\n\n"
-        "Appuie sur ENTREE pour entrer dans l'arène."
+        "Mais la flamme est toujours menacée...\n\n"
+        "Les ombres ont confisqué la lumière et le monde en a besoin.\n"
+        "Récupère la lumière volée et protège la flamme pour sauver le monde !\n\n"
+        "Appuie sur ENTREE pour continuer l'aventure."
     );
     missionText.setCharacterSize(22);
     missionText.setFillColor(sf::Color(220, 220, 255)); // bleu clair

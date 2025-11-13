@@ -5,7 +5,7 @@
 #include <iostream>
 
 Menu::Menu(Game& game)
-    : gameRef(game), titleText(font), missionText(font), instrText(font), 
+    : gameRef(game), titleText(font), missionText(font), instrText(font),
     level2Text(font)
 {
     if (!font.openFromFile("assets/fonts/arial.ttf")) {
